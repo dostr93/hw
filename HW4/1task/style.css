@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: green;
+    height: 100vh;
+    margin: 0 auto;
+    max-width: 1140px;
+    position: relative;
+}
+
+.cards__item {
+    position: absolute;
+    left: 50%;
+    top: 400px;
+    transform-origin: left bottom;
+    transform: rotate(-10deg);
+    transition: top .5s linear;
+}
+
+.cards__item:hover {
+    top: 380px;
+}
+
+.cards__item:last-child {
+    transform: rotate(7deg);
+    left: 51%;
+}
+
+.cards__item:first-child {
+    transform: rotate(-23deg);
+    left: 49%;
+}
+
+.cards__img {
+    width: 150px;
+    display: inline-block;
+}

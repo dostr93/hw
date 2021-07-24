@@ -1,0 +1,49 @@
+.container {
+    font-size: 25px;
+    background-color: $bg-green;
+    height: 100vh;
+    color: $white;
+    text-align: center;
+}
+.quote {
+    margin-bottom: 100px;
+}
+
+blockquote {
+    margin: 0;
+    padding-top: 30px;
+}
+
+.cards {
+    position: relative;
+    margin: 0 auto; 
+}
+
+.card__item {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 150px;
+    transform-origin: bottom left;
+    transform: translateX(-50%) rotate(-10deg);
+    transition: top .3s linear;
+    
+    &:hover {    
+        top: -20px;
+    }
+
+    &:first-child {
+        left: 49%;
+        transform: translateX(-50%) rotate(-23deg);
+    }
+
+    &:last-child {
+        left: 51%;
+        transform: translateX(-50%) rotate(7deg);
+    }
+}
+
+.card__img {
+    display: block;
+    width: 100%;
+}

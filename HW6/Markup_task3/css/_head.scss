@@ -1,0 +1,44 @@
+#wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.section {
+    margin: 77px 0;
+    padding: 0 10px;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.head {
+    text-align: center;
+
+    &__title {
+        font-family: $title-font-family;
+        font-weight: $semi-bold;
+        font-size: 30px;
+        margin: 0 0 15px;
+        color: $darkest-grey;
+    }
+
+    &__text {
+        font-family: $text-font-family;
+        font-weight: $light;
+        font-size: 16px;
+        color: $grey;
+        line-height: 1.75;
+        margin: 0 auto;
+        
+        @media (min-width: 768px) {
+            width: 770px;
+        }
+        
+        > p {
+            margin: 0;
+        }
+    }
+}

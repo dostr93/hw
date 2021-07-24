@@ -1,0 +1,29 @@
+.blocks {
+    position: relative;
+    margin: 100px;
+    height: 300px;
+}
+
+.block__item {
+    @extend %block_size;
+    z-index: 1;
+    background-color: $block-coral;
+
+
+    &::before {
+        @extend %block_size;
+        content: '';
+        background-color: $block-blue;
+        top: 55px;
+        left: 55px;
+        z-index: 2;
+    }
+
+    &::after {
+        @extend %block_size;
+        content: '';
+        background-color: $block-green;
+        top: 110px;
+        left: 110px;
+    }
+}

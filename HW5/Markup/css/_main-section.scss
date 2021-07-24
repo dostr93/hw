@@ -1,0 +1,94 @@
+#main {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    padding: 10px 20px 20px;
+    margin: 0 auto;
+    text-align: center;
+    order: 2;
+
+    h1 {
+        text-transform: uppercase;
+    }
+}
+
+.sidebar {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    min-width: 230px;
+    
+    &:nth-child(2) {
+        background-color: $aside1-bg;
+        order: 1;
+    }
+
+    &:last-child {
+        background-color: $aside2-bg;
+        order: 3;
+    }
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+
+    &__item {      
+        display: flex;
+        padding: 10px 5px;
+        flex-basis: calc(100%/3);
+    }
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border: 1px solid $grey;
+    border-radius: 15px;
+    transition: box-shadow 0.5s linear;
+
+    &:hover {
+        box-shadow: 0px 0px 34px 18px rgba(34, 60, 80, 0.5);
+    }
+
+    &__title {
+        font-size: 18px;
+    }
+
+    &__text {
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    &__img {
+        display: inline-block;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        border: 13px solid $grey;
+    }
+
+    &__btn {
+        text-decoration: none;
+        color: $white;
+        padding: 10px 20px;
+        background-color: $btn-color-violet;
+        min-width: 70px;
+        align-self: center;
+        border-radius: 40px;
+        transition: background-color .2s linear;
+
+        &:hover {
+            background-color: $btn-hover-color;
+        }
+    }
+}

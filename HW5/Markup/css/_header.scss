@@ -1,0 +1,39 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(218, 190, 32);
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.logo {
+    padding: 5px;
+
+    &__img {
+        display: block;
+        width: 170px;
+    }
+}
+
+.menu {
+    @extend %listreset;
+    display: flex;
+
+    > li {
+        padding-right: 15px;
+
+        a {
+            transition: color .3s linear;
+
+            &:hover {
+                text-decoration: underline;
+                color: $white
+            }
+        }
+    }
+
+    &__nav {
+        text-decoration: none;
+        color: $black;
+    }
+}
